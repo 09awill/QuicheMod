@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bf13b67d32781ced0763ff927b0597, type: 3}
+  m_Name: SnapshotRenderer
+  m_EditorClassIdentifier:
+  m_RendererFeatures:
+  - {fileID: 11400000, guid: f880c7ebc85c7e544acc7f231153653b, type: 2}
+  - {fileID: 11400000, guid: b33d8b583011b31458a68f2cc617d23b, type: 2}
+  - {fileID: 11400000, guid: b8213037c8ef28a47beb453014496526, type: 2}
+  - {fileID: 11400000, guid: ab9267fb333f6b94d9fdec19c3c9aea3, type: 2}
+  m_RendererFeatureMap: c48b2611c00019e00934d704e30f8de8d83b6fa2aa79f5c6478e380195857cc2
+  postProcessData: {fileID: 11400000, guid: 3dbb7a7469b3f6341ba5e083f484c2be, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 15d2c15b31d39e64e80c7823f8c5912f, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: f39af0048e1246e4184bb034af04404e, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: bda9386441b639f44a5359ea31e4c13e, type: 3}
+    screenSpaceShadowPS: {fileID: 4800000, guid: 0e5a3fe8c9604da459ca03120713e8ba, type: 3}
+    samplingPS: {fileID: 4800000, guid: 6bd5a375c26345f49b7c099b9714eadd, type: 3}
+    tileDepthInfoPS: {fileID: 0}
+    tileDeferredPS: {fileID: 0}
+    stencilDeferredPS: {fileID: 4800000, guid: f1b042a9e0412d04a9dca40fed46707a, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: 8b1c0652644a9db4da70e28b3b162b53, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 4629a565c67452e43ac5a6aa628634e6, type: 3}
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 1
+  m_RenderingMode: 0
+  m_AccurateGbufferNormals: 0
