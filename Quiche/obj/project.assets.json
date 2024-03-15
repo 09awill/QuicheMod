@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "MessagePack.Annotations/2.4.59": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Yariazen.PlateUp.ModBuildUtilities/1.6.16": {
+        "type": "package",
+        "build": {
+          "build/Yariazen.PlateUp.ModBuildUtilities.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MessagePack.Annotations/2.4.59": {
+      "sha512": "3I1OxkqjiL0QEHnEJCia5TOeQuqVpYmNbprdw9uyIRXniei01ElWTS7Qcte+ionHM0KYiPWYhXQFJIeYb5Hbrg==",
+      "type": "package",
+      "path": "messagepack.annotations/2.4.59",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.2.4.59.nupkg.sha512",
+        "messagepack.annotations.nuspec"
+      ]
+    },
+    "Yariazen.PlateUp.ModBuildUtilities/1.6.16": {
+      "sha512": "zv6jLo6292f5b+PFsB+RnDIp68rUSxMTUPxnw6iLGJswZeDUnA6a3YxZb1gSQsRtNs48C6Lmrbji+l+SO6szrQ==",
+      "type": "package",
+      "path": "yariazen.plateup.modbuildutilities/1.6.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Yariazen.PlateUp.ModBuildUtilities.dll",
+        "build/Yariazen.PlateUp.ModBuildUtilities.targets",
+        "yariazen.plateup.modbuildutilities.1.6.16.nupkg.sha512",
+        "yariazen.plateup.modbuildutilities.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "MessagePack.Annotations >= 2.4.59",
+      "Yariazen.PlateUp.ModBuildUtilities >= 1.6.16"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\addme\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "H:\\PlateUp Modding\\MyMods\\Quiche\\Quiche\\Quiche.csproj",
+      "projectName": "Quiche-Workshop",
+      "projectPath": "H:\\PlateUp Modding\\MyMods\\Quiche\\Quiche\\Quiche.csproj",
+      "packagesPath": "C:\\Users\\addme\\.nuget\\packages\\",
+      "outputPath": "H:\\PlateUp Modding\\MyMods\\Quiche\\Quiche\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\addme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "targetAlias": "net472",
+        "dependencies": {
+          "MessagePack.Annotations": {
+            "target": "Package",
+            "version": "[2.4.59, )"
+          },
+          "Yariazen.PlateUp.ModBuildUtilities": {
+            "target": "Package",
+            "version": "[1.6.16, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
