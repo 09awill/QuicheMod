@@ -97,6 +97,12 @@ namespace KitchenQuiche
         internal static Item CheeseQuiche => GetModdedGDO<Item, CheeseQuiche>();
         internal static Item CheeseTomatoQuiche => GetModdedGDO<Item, CheeseTomatoQuiche>();
         internal static Item LorraineQuiche => GetModdedGDO<Item, LorraineQuiche>();
+        internal static Item CheeseQuicheSlice => GetModdedGDO<Item, CheeseQuicheSlice>();
+        internal static Item CheeseTomatoQuicheSlice => GetModdedGDO<Item, CheeseTomatoQuicheSlice>();
+        internal static Item LorraineQuicheSlice => GetModdedGDO<Item, LorraineQuicheSlice>();
+        internal static Item QuicheBurnt => GetModdedGDO<Item, QuicheBurnt>();
+
+
 
 
 
@@ -152,6 +158,11 @@ namespace KitchenQuiche
             AddGameDataObject<UncookedCheeseQuiche>();
             AddGameDataObject<UncookedCheeseTomatoQuiche>();
             AddGameDataObject<UncookedLorraineQuiche>();
+            AddGameDataObject<CheeseQuicheSlice>();
+            AddGameDataObject<CheeseTomatoQuicheSlice>();
+            AddGameDataObject<LorraineQuicheSlice>();
+            AddGameDataObject<QuicheBurnt>();
+
 
             //Providers
 

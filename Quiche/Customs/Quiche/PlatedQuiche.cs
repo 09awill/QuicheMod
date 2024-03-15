@@ -15,7 +15,7 @@ namespace Quiche.Customs.Quiche
     public class PlatedQuiche : CustomItemGroup<PlatedQuicheItemGroupView>
     {
         public override string UniqueNameID => "Plated Quiche";
-        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("PlatedQuiche");
+        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("PlatedQuiche").AssignMaterialsByNames();
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemValue ItemValue => ItemValue.Medium;
         public override Item DisposesTo => Mod.Plate;
@@ -32,9 +32,9 @@ namespace Quiche.Customs.Quiche
                 RequiresUnlock = true,
                 Items = new List<Item>()
                 {
-                    Mod.CheeseQuiche,
-                    Mod.CheeseTomatoQuiche,
-                    Mod.LorraineQuiche
+                    Mod.CheeseQuicheSlice,
+                    Mod.CheeseTomatoQuicheSlice,
+                    Mod.LorraineQuicheSlice
                 }
             },
             new ItemSet()
@@ -53,17 +53,17 @@ namespace Quiche.Customs.Quiche
                 new()
                 {
                     Text = "C",
-                    Item = Mod.CheeseQuiche
+                    Item = Mod.CheeseQuicheSlice
                 },
                 new()
                 {
                     Text = "CT",
-                    Item = Mod.CheeseTomatoQuiche
+                    Item = Mod.CheeseTomatoQuicheSlice
                 },
                 new()
                 {
                     Text = "L",
-                    Item = Mod.LorraineQuiche
+                    Item = Mod.LorraineQuicheSlice
                 }
         };
 
@@ -88,18 +88,18 @@ namespace Quiche.Customs.Quiche
             {
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "CheeseQuiche"),
-                    Item = Mod.CheeseQuiche
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "CheeseQuicheSlice"),
+                    Item = Mod.CheeseQuicheSlice
                 },
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "CheeseTomatoQuiche"),
-                    Item = Mod.CheeseTomatoQuiche
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "CheeseTomatoQuicheSlice"),
+                    Item = Mod.CheeseTomatoQuicheSlice
                 },
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "LorraineQuiche"),
-                    Item = Mod.LorraineQuiche
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "LorraineQuicheSlice"),
+                    Item = Mod.LorraineQuicheSlice
                 }
             };
         }

@@ -19,7 +19,7 @@ public class AssetBundler
     /// <summary>
     /// Name of the output bundle file. This needs to match the bundle that you tag your assets with.
     /// </summary>
-    private static readonly string BUNDLE_FILENAME = "jacketpotatomod.assets";
+    private static readonly string BUNDLE_FILENAME = "mod.assets";
 
     /// <summary>
     /// The output folder to place the completed bundle in.
