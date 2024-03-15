@@ -25,7 +25,7 @@ namespace Quiche.Customs.Cards
         {
             new Dish.IngredientUnlock
             {
-                Ingredient = Mod.CheeseTomatoQuiche,
+                Ingredient = Mod.CheeseTomatoQuicheSlice,
                 MenuItem = Mod.PlatedQuiche
             }
         };
@@ -39,40 +39,42 @@ namespace Quiche.Customs.Cards
         };
         public override HashSet<Process> RequiredProcesses => new HashSet<Process>
         {
-
+            Mod.Cook,
+            Mod.Chop,
+            Mod.RequireOven
         };
         public override Dictionary<Locale, string> Recipe => new Dictionary<Locale, string>
         {
-            { Locale.English, "Chop pork then cook to get bacon, then combine with plated jacket potato with filling!" },
-            { Locale.French, "Coupez le porc, puis faites cuire pour obtenir du bacon, puis combinez avec une pomme de terre en robe avec garniture !" },
-            { Locale.German, "Schneiden Sie Schweinefleisch, um Speck zu erhalten, und kombinieren Sie es dann mit einer gefüllten Jackenkartoffel!" },
-            { Locale.Spanish, "Corte el cerdo, luego cocine para obtener tocino, luego combine con una chaqueta de patata rellena!" },
-            { Locale.Polish, "Pokrój wieprzowinę, aby uzyskać boczek, a następnie połącz z upieczonym ziemniakiem z nadzieniem!" },
-            { Locale.Russian, "Нарежьте свинину, затем обжарьте, чтобы получить бекон, затем соедините с картофельной курткой с начинкой!" },
-            { Locale.PortugueseBrazil, "Corte o porco, depois cozinhe para obter bacon e depois combine com uma batata assada com recheio!" },
-            { Locale.Japanese, "豚肉を切って、ベーコンを作り、ジャケットポテトと具材と組み合わせます！" },
-            { Locale.ChineseSimplified, "切猪肉，然后煮成培根，然后与带馅土豆一起搭配！" },
-            { Locale.ChineseTraditional, "切豬肉，然後煮成培根，然後與帶餡土豆一起搭配！" },
-            { Locale.Korean, "돼지고기를 썰어 베이컨을 만든 다음, 피망이 들어간 감자 자켓과 함께 섞어주세요!" },
-            { Locale.Turkish, "Domuz etini doğrayın, sonra pastırmayı elde etmek için pişirin, ardından doldurulmuş patates ceketiyle birleştirin!" }
+            { Locale.English, "Knead flour (or add water) to create dough, then knead into pie crust. Cook crust, add chopped egg, chopped cheese and chopped tomato and then cook again." },
+            { Locale.French, "Pétrir la farine (ou ajouter de l'eau) pour créer une pâte, puis en faire une croûte à tarte. Cuire la croûte, ajouter un œuf haché, du fromage haché et de la tomate hachée puis cuire à nouveau." },
+            { Locale.German, "Mehl kneten (oder Wasser hinzufügen), um Teig zu formen, dann zu einem Kuchenboden verarbeiten. Boden backen, gehacktes Ei, gehackten Käse und gehackte Tomate hinzufügen und erneut backen." },
+            { Locale.Spanish, "Amasar la harina (o añadir agua) para crear la masa, luego amasar para formar la base de la tarta. Cocinar la base, añadir huevo picado, queso picado y tomate picado y cocinar de nuevo." },
+            { Locale.Polish, "Zagnieść mąkę (lub dodać wodę), aby uzyskać ciasto, następnie wyrobić spód do ciasta. Piec spód, dodać posiekane jajko, posiekany ser i posiekanego pomidora, a następnie piec ponownie." },
+            { Locale.Russian, "Замесить муку (или добавить воду) для создания теста, затем сформировать корж для пирога. Выпекать корж, добавить нарезанное яйцо, нарезанный сыр и нарезанный помидор, затем снова выпекать." },
+            { Locale.PortugueseBrazil, "Amassar a farinha (ou adicionar água) para criar massa, depois amassar para formar a crosta de torta. Cozinhar a crosta, adicionar ovo picado, queijo picado e tomate picado e cozinhar novamente." },
+            { Locale.Japanese, "小麦粉をこねて（または水を加えて）生地を作り、それをパイ生地にこねる。生地を焼き、刻んだ卵、刻んだチーズ、刻んだトマトを加えて再び焼く。" },
+            { Locale.ChineseSimplified, "揉面粉（或加水）制成面团，然后揉成派皮。烤派皮，加入切碎的鸡蛋、切碎的奶酪和切碎的番茄，然后再次烹饪。" },
+            { Locale.ChineseTraditional, "揉麵粉（或加水）製成麵團，然後揉成派皮。烤派皮，加入切碎的雞蛋、切碎的奶酪和切碎的番茄，然後再次烹飪。" },
+            { Locale.Korean, "밀가루를 반죽하여(또는 물을 추가하여) 반죽을 만들고, 그것을 파이 크러스트로 만듭니다. 크러스트를 요리하고, 다진 계란, 다진 치즈, 다진 토마토를 추가한 다음 다시 요리하세요." },
+            { Locale.Turkish, "Unu yoğurarak (veya su ekleyerek) hamur yapın, sonra bu hamuru pasta tabanına yoğurun. Tabanı pişirin, üzerine doğranmış yumurta, doğranmış peynir ve doğranmış domates ekleyip tekrar pişirin." }
         };
 
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            ( Locale.English, LocalisationUtils.CreateUnlockInfo("Jacket Potato Bacon Topping", "Adds Bacon as a topping for jacket potato", "Delicious bacon") ),
-            ( Locale.French, LocalisationUtils.CreateUnlockInfo("Garniture de Pomme de Terre au Bacon", "Ajoute du bacon comme garniture pour la pomme de terre en robe des champs", "Délicieux bacon") ),
-            ( Locale.German, LocalisationUtils.CreateUnlockInfo("Jacketkartoffel mit Specktopping", "Fügt Speck als Topping für die Jackenkartoffel hinzu", "Köstlicher Speck") ),
-            ( Locale.Spanish, LocalisationUtils.CreateUnlockInfo("Topping de Tocino para Patata en Chaqueta", "Agrega tocino como topping para la patata en chaqueta", "Delicioso tocino") ),
-            ( Locale.Polish, LocalisationUtils.CreateUnlockInfo("Boczek na Ziemniaku w Pelerynie", "Dodaje boczek jako dodatek do ziemniaka w mundurku", "Pyszny boczek") ),
-            ( Locale.Russian, LocalisationUtils.CreateUnlockInfo("Топпинг картофель с беконом", "Добавьте бекон как топпинг для картофеля в мундире", "Вкусный бекон") ),
-            ( Locale.PortugueseBrazil, LocalisationUtils.CreateUnlockInfo("Cobertura de Bacon para Batata Assada", "Adiciona bacon como cobertura para a batata assada", "Bacon delicioso") ),
-            ( Locale.Japanese, LocalisationUtils.CreateUnlockInfo("ジャケットポテトベーコントッピング", "ジャケットポテト用のベーコンを追加", "美味しいベーコン") ),
-            ( Locale.ChineseSimplified, LocalisationUtils.CreateUnlockInfo("夹克土豆培根餐盖", "将培根添加为夹克土豆的餐盖", "美味的培根") ),
-            ( Locale.ChineseTraditional, LocalisationUtils.CreateUnlockInfo("夾克馬鈴薯培根餐蓋", "將培根添加為夾克馬鈴薯的餐蓋", "美味的培根") ),
-            ( Locale.Korean, LocalisationUtils.CreateUnlockInfo("자켓 감자 베이컨 토핑", "자켓 감자 토핑으로 베이컨 추가", "맛있는 베이컨") ),
-            ( Locale.Turkish, LocalisationUtils.CreateUnlockInfo("Ceket Patates Bacon Kaplama", "Ceket patates için kaplama olarak bacon ekler", "Lezzetli bacon") ),
-
+            (Locale.English, LocalisationUtils.CreateUnlockInfo("Cheese and Tomato Quiche", "Adds Cheese and Tomato Quiche as a main", "Adding a pop of tomato freshness to your virtual culinary repertoire.")),
+            (Locale.French, LocalisationUtils.CreateUnlockInfo("Quiche au Fromage et Tomate", "Ajoute la Quiche au Fromage et Tomate comme plat principal", "Ajout d'une touche de fraîcheur de tomate à votre répertoire culinaire virtuel.")),
+            (Locale.German, LocalisationUtils.CreateUnlockInfo("Käse- und Tomaten-Quiche", "Fügt Käse- und Tomaten-Quiche als Hauptgericht hinzu", "Frische Tomaten verleihen Ihrem virtuellen kulinarischen Repertoire den letzten Schliff.")),
+            (Locale.Spanish, LocalisationUtils.CreateUnlockInfo("Quiche de Queso y Tomate", "Agrega Quiche de Queso y Tomate como plato principal", "Agregando un toque de frescura de tomate a tu repertorio culinario virtual.")),
+            (Locale.Polish, LocalisationUtils.CreateUnlockInfo("Quiche z Serem i Pomidorami", "Dodaje Quiche z Serem i Pomidorami jako danie główne", "Dodanie odrobiny świeżości pomidorów do twojego wirtualnego repertuaru kulinarnego.")),
+            (Locale.Russian, LocalisationUtils.CreateUnlockInfo("Чизкейк с сыром и томатами", "Добавляет Чизкейк с сыром и томатами в качестве основного блюда", "Добавление свежести томатов в ваш виртуальный кулинарный репертуар.")),
+            (Locale.PortugueseBrazil, LocalisationUtils.CreateUnlockInfo("Quiche de Queijo e Tomate", "Adiciona Quiche de Queijo e Tomate como prato principal", "Adicionando um toque de frescor de tomate ao seu repertório culinário virtual.")),
+            (Locale.Japanese, LocalisationUtils.CreateUnlockInfo("チーズとトマトのキッシュ", "メインとしてチーズとトマトのキッシュを追加", "トマトの新鮮さを仮想の料理レパートリーに加える。")),
+            (Locale.ChineseSimplified, LocalisationUtils.CreateUnlockInfo("奶酪和番茄饼", "将奶酪和番茄饼作为主菜添加", "为您的虚拟烹饪技巧增添一丝番茄的清新。")),
+            (Locale.ChineseTraditional, LocalisationUtils.CreateUnlockInfo("奶酪和蕃茄餅", "將奶酪和蕃茄餅作為主菜添加", "為您的虛擬烹飪技巧增添一絲蕃茄的清新。")),
+            (Locale.Korean, LocalisationUtils.CreateUnlockInfo("치즈와 토마토 퀴시", "주 메뉴로 치즈와 토마토 퀴시 추가", "토마토의 신선함을 가상의 조리 기술에 더합니다.")),
+            (Locale.Turkish, LocalisationUtils.CreateUnlockInfo("Peynir ve Domatesli Kiş", "Ana yemek olarak Peynir ve Domatesli Kiş ekler", "Sanal mutfak repertuarınıza domatesin tazeliğini ekleyin."))
         };
+
 
 
 

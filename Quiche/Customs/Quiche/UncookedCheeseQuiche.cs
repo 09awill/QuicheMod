@@ -15,21 +15,39 @@ namespace Quiche.Customs.Quiche
     public class UncookedCheeseQuiche : CustomItemGroup<UncookedCheeseQuicheItemGroupView>
     {
         public override string UniqueNameID => "Uncooked Cheese Quiche";
-        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("UncookedCheeseQuiche");
+        public override GameObject Prefab => Mod.Bundle.LoadAsset<GameObject>("UncookedCheeseQuiche").AssignMaterialsByNames();
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemValue ItemValue => ItemValue.Medium;
-
+        public override List<Item.ItemProcess> Processes => new List<Item.ItemProcess>
+        {
+            new Item.ItemProcess
+            {
+                Duration = 7,
+                Process = Mod.Cook,
+                IsBad = false,
+                Result = Mod.CheeseQuiche
+            }
+        };
         public override List<ItemSet> Sets => new List<ItemSet>()
         {
+            new ItemSet ()
+            {
+                Max = 1,
+                Min = 1,
+                IsMandatory = true,
+                Items = new List<Item>()
+                {
+                    Mod.PieCrustCooked
+                }
+            },
             new ItemSet()
             {
                 Max = 3,
-                Min = 3,
+                Min = 2,
                 Items = new List<Item>()
                 {
                     Mod.ChoppedCheese,
                     Mod.ChoppedEgg,
-                    Mod.PieCrustCooked
                 }
             }
         };
@@ -62,17 +80,17 @@ namespace Quiche.Customs.Quiche
             {
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "ChoppedCheese"),
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "Cheese"),
                     Item = Mod.ChoppedCheese
                 },
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "ChoppedEgg"),
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "Egg"),
                     Item = Mod.ChoppedEgg
                 },
                 new()
                 {
-                    GameObject = GameObjectUtils.GetChildObject(prefab, "PieCrustCooked"),
+                    GameObject = GameObjectUtils.GetChildObject(prefab, "Pie Cooked"),
                     Item = Mod.PieCrustCooked
                 }
             };
